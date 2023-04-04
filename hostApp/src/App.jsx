@@ -1,18 +1,24 @@
-import { useState } from 'react'
 import Button from "remoteApp/Button"
 import Navbar from "remoteApp/Navbar"
 import './App.css'
-
+import { BrowserRouter, Route, Routes ,Link } from 'react-router-dom'
+import Home from "./Home"
+import Login from "./Login"
 function App() {
  
   return (
+    <BrowserRouter>
     <div >
-      <div style={{marginBottom:5}}>
-        <Navbar/>
+      <div>
+       <Navbar Link ={Link}/>
       </div>
-        <Button/>
-
+      <Button/>
+        <Routes>
+         <Route path='/home' element={<Home/>}/>
+         <Route path='/login' element={<Login/>}/>
+        </Routes>
     </div>
+      </BrowserRouter>
   )
 }
 

@@ -13,7 +13,7 @@ export default defineConfig({
         "./Navbar": "./src/Navbar",
         "./Button": "./src/Button"
       },
-      shared: ["react", "react-dom","@mui/material","@emotion/react","@emotion/styled","framer-motion","@mui/icons-material"],
+      shared: ["react", "react-dom","@mui/material","@emotion/react","@emotion/styled","framer-motion","@mui/icons-material","react-router-dom"],
     }),
   ],
   build: {

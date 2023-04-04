@@ -8,8 +8,8 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { ThemeProvider, createTheme } from '@mui/material';
 import { orange } from '@mui/material/colors';
-
-export default function Navbar() {
+// import {Link} from 'react-router-dom'
+export default function Navbar({Link}) {
   const theme = createTheme({
     palette: {
       primary: {
@@ -22,6 +22,7 @@ export default function Navbar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
+          <Link to={"/home"}>
           <IconButton
             size="large"
             edge="start"
@@ -31,10 +32,14 @@ export default function Navbar() {
           >
             <MenuIcon />
           </IconButton>
+          </Link>
+    
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+            Navbar
           </Typography>
+          <Link to={"/login"}>
           <Button color="inherit">Login</Button>
+          </Link>
         </Toolbar>
       </AppBar>
     </Box>
